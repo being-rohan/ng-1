@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>sr</th>
+                        <th>userid</th>
+                        <th>title</th>
+                        <th>orderstatus</th>
+
+                    </tr>
+                </thead>
+                <tbody *ngFor="let post of post2, let i = index" [ngClass]="{'bg-info' : post.completed===true,
+            'bg-danger':post.completed===false}">
+                    <tr>
+                        <td>{{i+1}}</td>
+                        <td>{{post.title}}</td>
+                        <td>{{post.userId}}</td>
+                        <td>{{post.completed}}</td>
+                    </tr>
+                </tbody>
+            </div>
+        </div>
+    </div>
+</div>

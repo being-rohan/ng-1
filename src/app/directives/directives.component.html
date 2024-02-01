@@ -1,0 +1,36 @@
+<!-- <p>directives works!</p> -->
+
+<!-- /// directives>> it gives instruction to dom(ui) -->
+<!-- i) component >  the compobnent contains the data and user interaction logic that defines how the view looks and behave's  -->
+<!-- e.g  custom html element   <app-product></app-product> -->
+
+<!-- ii) structural directives >>  it changes the structure of  ui  by adding and remove dom element and start with *  -->
+<!-- e.g *ngfor="" ,ngif="", ngswitch="" -->
+
+<!-- iii) attribute directive/styledirective >> an attribute can change the appearence and behaviour of an element -->
+<!-- e.g  the [ngmodel] is achive in two binding, [ngclass], [ngstyle] -->
+
+<!-- //// attribute directive -->
+
+<div>
+
+    <p class="p-4" [ngStyle]="{
+        backgroundColor :'red',
+        color:'white'
+    }">
+       product available
+    </p>
+
+    <p class="p-4"[ngStyle]="{
+        backgroundColor :isproductavailable ? 'green':'blue',
+        color:'white'
+       
+    }">
+       product !available
+      
+    </p>
+</div> 
+
+
+
+

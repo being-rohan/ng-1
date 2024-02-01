@@ -1,0 +1,35 @@
+<!-- //// button ch ad dcart
+/// button remove cart
+/// input control  2 -way event binding
+/// inut control event string interpolation -->
+
+
+<button class="btn btn-primary p-2 m-2" [disabled]="isdisable" (click)="updatestatus()">add product</button>
+<button class="btn btn-primary p-2 m-2" [disabled]="productnumber===0" (click)="removestatus()"> remove product</button>
+
+<p class="alert alert-info">
+
+    {{productstatus}}
+
+</p>
+
+<div class="form-group mt-2 pl-2">
+    <label for="serachhere"> search</label>
+    <input type="text" class="form-control" (keyup)="searchhere($event)">
+</div>
+<div class="form-group mt-2 pl-2">
+    <label for="serachhere"> search (2-waybinding)</label>
+    <input type="text" class="form-control" [(ngModel)]="serachedvalue2">
+</div>
+<!-- <p class="alert alert-info">
+    {{serachedvalue}}
+
+</p> -->
+<p class="alert alert-info">
+    {{serachedvalue}}
+
+</p>
+<p class="alert alert-danger text-dark">
+    {{serachedvalue2}}
+
+</p>
